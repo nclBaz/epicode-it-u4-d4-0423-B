@@ -26,6 +26,11 @@ public class Cat extends Animal {
 		System.out.println("Per essere più precisi, sono un GATTO e sto camminando");
 	}
 
+	@Override
+	public void getInfo() {
+		System.out.println("Ciao le mie informazioni sono: " + this.name + " ," + this.age + " ," + this.moustacheColor);
+	}
+
 	public void walk(int numeroDiPassi) { // OVERLOAD
 		this.walk();
 		System.out.println("Camminerò per " + numeroDiPassi + " passi");
