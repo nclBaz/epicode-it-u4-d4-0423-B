@@ -1,6 +1,8 @@
 package entities;
 
-public class Cat extends Animal {
+import interfaces.Runner;
+
+public class Cat extends Animal implements Runner {
 	private String moustacheColor;
 	private boolean tail;
 
@@ -34,5 +36,20 @@ public class Cat extends Animal {
 	public void walk(int numeroDiPassi) { // OVERLOAD
 		this.walk();
 		System.out.println("Camminerò per " + numeroDiPassi + " passi");
+	}
+
+	@Override
+	public void run() {
+		System.out.println("Ciao sono un gatto e sto correndo");
+	}
+
+	@Override
+	public String toString() {
+		return "Cat{" +
+				"moustacheColor='" + moustacheColor + '\'' +
+				", tail=" + tail +
+				", name='" + name + '\'' +
+				", age=" + age +
+				"} ";
 	}
 }
